@@ -1,10 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 import EHeader from './Elements/EHeader';
+import CCMyKitchen from './CCMyKitchen/CCMyKitchen';
 
 const App = 
-<div>
- 
-</div>
+  <CCMyKitchen/>  
 
 export default App;
