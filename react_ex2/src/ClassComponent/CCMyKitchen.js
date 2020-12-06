@@ -4,6 +4,7 @@ import FCRecipesDone from '../FunctionalComponents/FCRecipesDone';
 import salad1 from '../Assets/salad1.jpg';
 import salad2 from '../Assets/salad2.jpg';
 import salad3 from '../Assets/salad3.jpg';
+import salad4 from '../Assets/salad4.jpg';
 import FCCounter from '../FunctionalComponents/FCCounter';
 import EHeader from '../Elements/EHeader';
 import ENavBar from '../Elements/ENavBar';
@@ -12,9 +13,11 @@ export default class CCMyKitchen extends Component {
 
     state = {
         recipes: [
-            { title: "Greek Salad", img: salad1, desc:"tomatoes, cucumbers, onion, feta cheese, and olives and dressed with salt, pepper, Greek oregano, and olive oil " },
-            { title: "Avocado Salad", img: salad2, desc:"cucumber and tomato salad just got better with the addition of avocado, a light and flavorful lemon dressing and the freshness of cilantro" },
-            { title: "Mandarin Salad", img: salad3 , desc:"baby spinach, arugula, mandarin oranges, toasted walnuts, dried cranberries,shaved Parmesan and Pinch of flaky sea salt"}
+            { title: "Greek Salad", img: salad1, desc:"Tomatoes, cucumbers, onion, feta cheese, and olives and dressed with salt, pepper, Greek oregano, and olive oil " },
+            { title: "Avocado Salad", img: salad2, desc:"Cucumber and tomato salad just got better with the addition of avocado, a light and flavorful lemon dressing and the freshness of cilantro" },
+            { title: "Mandarin Salad", img: salad3 , desc:"Baby spinach, arugula, mandarin oranges, toasted walnuts, dried cranberries,shaved Parmesan and Pinch of flaky sea salt"},
+            {title:"Ceaser Salad", img:salad4,desc:"Romaine lettuce,croutons, parmigiano reggiano shavings and caesar dressing"}
+
         ],
         eatenRecipes: [],
         counter: 0
