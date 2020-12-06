@@ -1,9 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import EHeader from './Elements/EHeader';
-import CCMyKitchen from './CCMyKitchen/CCMyKitchen';
+import CCMyKitchen from './ClassComponent/CCMyKitchen';
 
-const App = 
-  <CCMyKitchen/>  
+function App() {
+  return (
+<CCMyKitchen/>
+  );
+}
 
 export default App;
