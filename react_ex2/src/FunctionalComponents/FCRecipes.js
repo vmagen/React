@@ -1,14 +1,16 @@
 import React from 'react'
 import FCRecipe from './FCRecipe';
 
+
 export default function FCRecipes(props) {
 
-    let list = props.recipes.map(
-        (r, index) => <FCRecipe title={r.title} img={r.img} index={index} getRecipe={props.getRecipe}/>);
+  
+  let list = props.recipes.map(
+    (r, index) => <FCRecipe title={r.title} img={r.img} desc={r.desc} index={index} getRecipe={props.getRecipe} btnTitle={'Eat Me!'} variant={'btn btn-outline-primary'}/>);
 
-    return (
-        <div>
-            {list}
-        </div>
-    )
+  return (
+    <div className="recipesDiv">
+      {list}
+    </div>
+  )
 }
