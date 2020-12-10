@@ -1,9 +1,8 @@
 import React from 'react'
 
-export default function ENavBar() {
-    return (
+const ENavBar=
         <nav class="navbar navbar navbar-expand navbar-light">
           <span>Vered Magen & Ron Navon </span>
         </nav>
-    )
-}
+        
+export default ENavBar;

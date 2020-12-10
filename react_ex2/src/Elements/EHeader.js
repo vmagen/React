@@ -1,10 +1,11 @@
 import React from 'react'
 
-export default function EHeader() {
-    return (
+const EHeader=
+    
         <div>
            <h1>My Kitchen</h1> 
            <h2>Recipe Dishes</h2> 
         </div>
-    )
-}
+    
+export default EHeader;
+
