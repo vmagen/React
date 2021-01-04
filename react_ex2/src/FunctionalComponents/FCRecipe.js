@@ -8,7 +8,7 @@ export default function FCRecipe(props) {
   const eatRecipe = () => {
     props.getRecipe(props.index)
   }
-
+  
   return (
     <Card style={{ width: '18rem' }}>
       <Card.Img variant="top" src={props.img} />
@@ -18,6 +18,5 @@ export default function FCRecipe(props) {
         <Button onClick={eatRecipe} variant={props.variant}>{props.btnTitle}</Button>
       </Card.Body>
     </Card>
-
   )
 }
