@@ -6,6 +6,11 @@
   height: 40vmin;
   pointer-events: none;
 }
+a {
+  color: #E3DB86;
+  text-decoration: none;
+  background-color: transparent;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
