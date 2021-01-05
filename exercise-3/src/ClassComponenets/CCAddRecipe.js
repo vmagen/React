@@ -31,7 +31,7 @@ export default class CCAddRecipe extends React.Component {
             })
             .then(res => {
                 this.setState({
-                    ingredients: res.data.map(o => { return { Name: o.Name, id: o.ID } })
+                    ingredients: res.data.map(o => { return { name: o.Name, id: o.ID } })
                 }, () => console.log(this.state.ingredients));
             })
     }
@@ -53,23 +53,20 @@ export default class CCAddRecipe extends React.Component {
     }
 
     onSelect(selectedList) {
-        let temp=[];
-        let temp2=[];
-        temp = this.state.selectedIngredients;
-        temp2= selectedList.id;
+
         this.setState({
-            selectedIngredients:temp2
-        },()=> console.log(this.state.ingredientsInRecipes));
+            selectedIngredients:selectedList
+        },()=> console.log(this.state.selectedIngredients));
     }   
 
     handleSubmit = () => {
         let newRecipe =
         {
             "Name": this.state.Name,
-            "Image": this.state.Image,
-            "Time": this.state.Time,
-            "CookingMethod": this.state.CookingMethod,
-            "ingredientsInRecipes": this.state.selectedIngredients
+            "imageURL": this.state.Image,
+            "cookingTime": this.state.Time,
+            "cookingMethod": this.state.CookingMethod,
+            "ingredientsIDs":  this.state.selectedIngredients.map(i=>i.id)
         };
 
         fetch(apiUrl,
@@ -99,10 +96,9 @@ export default class CCAddRecipe extends React.Component {
     }
 
     
-
     render() {
         return (
-            <form onSubmit={this.handleSubmit} style={{ marginLeft: 150 }}>
+            <form onSubmit={this.handleSubmit} style={{ marginLeft: 150, marginTop:100 }}>
                 <table>
                     <tbody>
                         <tr>
@@ -132,14 +128,14 @@ export default class CCAddRecipe extends React.Component {
                     </tbody>
                 </table>
                 <Multiselect  //https://www.npmjs.com/package/multiselect-react-dropdown
-                    options={this.state.ingredients.map(i => i.Name)}
-                    isObject={false}
+                    options={this.state.ingredients}
+                    isObject={true}
                     selectedValues={this.state.selectedValue} 
                     onSelect={this.onSelect} 
                     onRemove={this.onRemove} 
-                    displayValue="Name" 
+                    displayValue="name" 
                 />
-                <input type="submit" value="Submit" />
+                <input type="submit" value="Add Recipe" />
             </form>
         )
 
